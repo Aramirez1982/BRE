@@ -1,0 +1,23 @@
+.flexboxx {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flexboxx__item {
+	align-self: flex-start;
+	flex-basis: 100%;
+	margin-bottom: 2.5em;
+	text-align: center;
+	@include breakpoint(525px, $no-query: true) {
+		flex-basis: 50%;
+	}
+	@include breakpoint(750px, $no-query: true) {
+		flex-basis: 33.333333%;
+	}
+	@include breakpoint(1000px, $no-query: true) {
+		flex-basis: 25%;
+	}
+	.entry-utility {
+		display: none;
+	}
+}

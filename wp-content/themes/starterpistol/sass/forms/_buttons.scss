@@ -1,0 +1,27 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	border-radius: 0;
+	background-color: $green;
+	color: $black;
+	font-family: $font__main;
+	font-size: $font-sm;
+	line-height: 1.5;
+	padding: 15px;
+	white-space: pre-line;
+	width: 100%;
+	@include breakpoint(600px, $no-query: true) {
+		font-size: $base-font;
+	}
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
