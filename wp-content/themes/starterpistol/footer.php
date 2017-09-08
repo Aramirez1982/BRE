@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="l-constrain">
 			<div class="site-info">
-				Copyright © 2017 <?php bloginfo( 'name' ); ?>. All Rights Reserved. Developed by Ramirez Creative Solutions.
+				Copyright © 2017 <?php bloginfo( 'name' ); ?>. All Rights Reserved. Developed by Blood Related Entertainment.
 			</div><!-- .site-info -->
 		</div>
 	</footer><!-- #colophon -->

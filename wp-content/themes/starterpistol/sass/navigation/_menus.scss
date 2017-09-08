@@ -2,12 +2,16 @@
 	clear: both;
 	float: none;
 	font-family: $font__secondary;
-	font-size: $font-sm;
+	font-size: $font-xs;
 	line-height: 75px;
 	overflow: hidden;
-	@include breakpoint(975px, $no-query: true) {
-		float: right;
-		line-height: 112px;
+	@include breakpoint(850px, $no-query: true) {
+		float: left;
+		line-height: 123px;
+		margin-left: 220px;
+	}
+	@include breakpoint(1250px, $no-query: true) {
+		font-size: $font-md;
 	}
 	ul {
 		display: none;
@@ -71,8 +75,22 @@
 		color: $nav-link;
 		display: block;
 		text-decoration: none;
+		text-transform: uppercase;
+		position: relative;
+		&:before {
+			content: "";
+			display: none;
+		}
 		&:hover, &:focus {
-			color: $nav-link-hover;
+			&:before {
+				border-bottom: 5px solid $red;
+				bottom: 35px;
+				display: inline-block;
+				height: 5px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
 		}
 	}
 
@@ -80,6 +98,16 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $red;
+		&:before {
+			border-bottom: 5px solid $white;
+			bottom: 35px;
+			display: inline-block;
+			height: 5px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
 	}
 }
 

@@ -27,6 +27,8 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
+		<?php the_field('artist_image'); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

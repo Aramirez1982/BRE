@@ -1,3 +1,30 @@
 .site-header {
-	background-color: $green;
+	background-color: $black; 
+	overflow: hidden;
+	position: relative;
+}
+
+.site-header--widget {
+	float: right;
+	margin: 1em 1em 0 210px;
+	@include breakpoint(1000px, $no-query: true) {
+		float: left;
+		margin-left: 220px;
+		margin-right: 2em;
+	}
+	@include breakpoint(1575px, $no-query: true) {
+		float: right;
+		margin-left: 0;
+	}
+	.textwidget {
+		p {
+			margin: 0;
+			iframe {
+				max-width: 100%;
+				@include breakpoint(1575px, $no-query: true) {
+					width: auto;
+				}
+			}
+		}
+	}
 }

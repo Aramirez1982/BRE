@@ -1,0 +1,25 @@
+.subscription {
+	font-size: $font-xs;
+	margin-left: 2em;
+	position: absolute;
+	top: 0;
+	@include breakpoint(1250px, $no-query: true) {
+		font-size: $font-md;
+		top: 0;
+	}
+	a {
+		background-color: $red;
+		border-radius: 5px;
+		color: $white;
+		display: inline-block;
+		line-height: normal;
+		padding: 1em 2em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover, &:focus {
+			background-color: $white;
+			color: $red;
+		}
+	}
+}

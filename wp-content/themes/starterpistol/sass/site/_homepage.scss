@@ -1,0 +1,80 @@
+.homepage {}
+
+.homepage--gallery {
+	border-bottom: 5px solid $white;
+	border-top: 5px solid $white;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	@include breakpoint(875px, $no-query: true) {
+		height: 510px;
+	}
+	.post__item {
+		border-left: 5px solid $white;
+	  border-right: 5px solid $white;
+		display: block;
+		float: left;
+		overflow: hidden;
+		position: static;
+		height: 100%;
+  	width: 100%;
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+    @include breakpoint(875px, $no-query: true) {
+    	float: none;
+    	display: inline-block;
+    	height: 500px;
+    	position: absolute;
+			-webkit-transform: skew(-20deg);
+      -moz-transform: skew(-20deg);
+      -o-transform: skew(-20deg);
+		}
+	  p {
+	  	line-height: 0;
+	  	margin: 0;
+	    img {
+	    	-webkit-filter: grayscale(1);
+  			filter: grayscale(1);
+  			width: 100%;
+  			@include breakpoint(875px, $no-query: true) {
+  				width: 65%;
+  			}
+  			@include breakpoint(1025px, $no-query: true) {
+  				width: 50%;
+  			}
+  			@include breakpoint(1275px, $no-query: true) {
+  				width: 40%;
+  			}
+  			&:hover, &:focus {
+  				filter: grayscale(0);
+  			}
+	    }
+	  }
+	  &:first-child {
+	  	left: -100px;
+	  }
+	  &:nth-child(2) {
+	  	left: 320px;
+	  }
+	  &:nth-child(3) {
+	  	left: 735px;
+	  }
+	  &:nth-child(4) {
+	  	left: 1150px;
+	  }
+	  &:nth-child(5) {
+	  	left: 1575px;
+	  }
+
+	  &:nth-child(2),
+	  &:nth-child(3),
+	  &:nth-child(4),
+	  &:nth-child(5) {
+	  	display: none;
+	  	@include breakpoint(875px, $no-query: true) {
+	  		display: inline-block;
+	  	}
+	  }
+	}
+}

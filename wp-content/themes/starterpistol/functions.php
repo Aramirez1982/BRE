@@ -158,3 +158,50 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Custom Functions
 define('WPCF7_AUTOP', false );
+
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Header Widget',
+		'id'            => 'header_widget',
+		'before_widget' => '<div class="site-header--widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Widget 1',
+		'id'            => 'prefooter_widget_1',
+		'before_widget' => '<div class="pre-footer__widget-item">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<p class="pre-footer__widget-title">',
+		'after_title'   => '</p>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Widget 2',
+		'id'            => 'prefooter_widget_2',
+		'before_widget' => '<div class="pre-footer__widget-item">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<p class="pre-footer__widget-title">',
+		'after_title'   => '</p>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Widget 3',
+		'id'            => 'prefooter_widget_3',
+		'before_widget' => '<div class="pre-footer__widget-item">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<p class="pre-footer__widget-title">',
+		'after_title'   => '</p>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+

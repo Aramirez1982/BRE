@@ -2,10 +2,10 @@
 	directory so your changes won't be overwritten when the plugin is upgraded. -->
 
 <!-- Start of Post Wrap -->
-<div class="flexboxx__item">
+<div class="post__item">
 
 	<!-- This is the output of the EXCERPT -->
-	
+	<?php the_content(); ?>
 
 	<!-- EXCERPT Content ends here -->
 

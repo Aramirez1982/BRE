@@ -1,0 +1,71 @@
+.pre-footer {
+	background-color: $red;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	h3 {
+		color: #fff;
+		text-align: center;
+	}
+}
+
+.pre-footer__widget {
+	display: block;
+	overflow: hidden;
+	padding-bottom: 2em;
+	width: 100%;
+	@include breakpoint(700px, $no-query: true) {
+		display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	}
+}
+
+.pre-footer__widget-item {
+	border: 1px solid $white;
+	margin-bottom: 2%;
+	margin-left: 2%;
+	overflow: hidden;
+	width: 100%;
+	@include breakpoint(700px, $no-query: true) {
+		margin-bottom: 0;
+	}
+	&:first-child {
+		margin-left: 0;
+	}
+	&:nth-child(2) {
+		margin-left: 0;
+		@include breakpoint(700px, $no-query: true) {
+			margin-left: 2%;
+		}
+	}
+	.textwidget {
+		line-height: 0;
+		p {
+			height: 0;
+			overflow: hidden;
+			padding-bottom: 56.25%;
+			position: relative;
+			margin: 0;
+			iframe {
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+		}
+	}
+	&:last-of-type {
+		display: none;
+		@include breakpoint(1000px, $no-query: true) {
+			display: inline-block;
+		}
+	}
+}
+
+.pre-footer__widget-title {
+	display: none;
+}

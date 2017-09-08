@@ -1,5 +1,16 @@
 .site-footer {
 	background-color: $black;
+	background-image: url(../starterpistol/images/footer.png);
+	height: 211px;
 	padding: 1em 0;
 	text-align: center;
+	display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.site-info {
+	color: $white;
+	font-size: $font-sm;
+	padding: 0 2em .5em 2em;
 }

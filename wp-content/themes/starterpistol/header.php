@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -26,12 +27,12 @@
 	<div id="backtotop"></div>
 		
 	<header id="masthead" class="site-header">
-		<div class="l-constrain">
+
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php the_field('site-logo'); ?></a></div>
 				<?php else : ?>
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
@@ -52,9 +53,12 @@
 						'menu_id'        => 'primary-menu',
 					) );
 				?>
+				<span class="subscription"><a href="#">Subscriptions</a></span>
 			</nav><!-- #site-navigation -->
 
-		</div><!-- .l-constrain -->
+			<?php dynamic_sidebar( 'header_widget' ); ?>
+			
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

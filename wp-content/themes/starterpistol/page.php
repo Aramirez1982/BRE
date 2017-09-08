@@ -16,8 +16,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+			<!-- while ( have_posts() ) : the_post();
 
 				// get_template_part( 'template-parts/content', 'page' );
 
@@ -27,16 +26,30 @@ get_header(); ?>
 				endif;
 
 			endwhile; // End of the loop.
-			?>
+			?> -->
 
 			<!-- Content Begins Here -->
-
+			<div class="homepage--gallery">
+				<?php echo do_shortcode("[ic_add_posts category='front-page-gallery' showposts='5']"); ?>
+			</div>
 
 			<!-- Content Ends Here -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	<div class="pre-footer">
+		<div class="l-constrain--pre-footer">
+			<h3>WHAT’S NEW WITH BLOOD RELATED ENTERTAINMENT</h3>
+
+			<div class="pre-footer__widget">
+	      <?php dynamic_sidebar( 'prefooter_widget_1' ); ?>
+	      <?php dynamic_sidebar( 'prefooter_widget_2' ); ?>
+	      <?php dynamic_sidebar( 'prefooter_widget_3' ); ?>
+			</div>
+
+		</div>
+	</div>
 <?php
 
 get_footer();
